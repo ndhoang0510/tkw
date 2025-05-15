@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đăng ký</title>
+    <style>
+        form{
+            max-width: 500px;
+            margin: auto;
+        }
+        input, select{
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+    @media (max-width: 414px) {
+      body { font-size: 14px; }
+    }
+    @media (min-width: 415px) and (max-width: 1024px) {
+      body { font-size: 16px; }
+    }
+    @media (min-width: 1025px) {
+        body {
+            font-size: 18px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <form id="signup">
+        <h2>Đăng kí dịch vụ chăm sóc thú cưng</h2>
+        <input type="text" id="name" placeholder="Họ và Tên" required>
+        <input type="email" id="email" placeholder="Địa chỉ email" required>
+        <input type="tel" id="phone" placeholder="Số điện thoại" required>
+        <input type="text" id="pet" placeholder="Loại thú cưng" required>
+        <input type="text" id="desc" placeholder="Mô tả chi tiết nhu cầu" required>
+        <button type="submit">Gửi</button>
+    </form>
+
+    <script>
+        document.getElementById("signup").addEventListener("submit", function (e) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            if ( !name || !email || !phone.match(/^\d{10,11}$/)){
+                alert("vui lòng điền đúng thông tin!");
+                e.preventDefault();
+            }else {
+                alert("Đã gửi thành công!")
+            }
+            }
+        );
+    </script>
+</body>
+</html>

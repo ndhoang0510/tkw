@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dich vu cham soc thu cưng</title>
+    <style>
+        body {
+            font-family: "Anta", sans-serif;
+            background-color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #658d1b;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            background-color: #88b04b;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .slogan {
+            font-style: italic;
+            color: #eee;
+            margin-top: 5px;
+        }
+
+        .banner {
+            width: 100%;
+            height: 150px;
+            border: 2px solid #658d1b;
+            background-color: #78be20;
+            text-align: center;
+            font-size: 50px;
+            padding-top: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .banner:hover {
+            background-color: #a2d149;
+            border-color: #33691e;
+            color: white;
+            font-style: italic;
+        }
+
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .item {
+            border: 2px solid #d0d058;
+            background-color: #ffd100;
+            width: 300px;
+            margin: 10px;
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .form {
+            margin: 40px auto;
+            max-width: 600px;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .form input, .form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        @media (max-width: 414px) {
+            body { font-size: 14px; }
+        }
+
+        @media (min-width: 415px) and (max-width: 1024px) {
+            body { font-size: 16px; }
+        }
+
+        @media (min-width: 1025px) {
+            body { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+<header>
+        <div class="logo">
+            <img src="https://static.vecteezy.com/system/resources/previews/014/527/407/large_2x/pug-eat-meat-icon-cartoon-style-vector.jpg" height="250" width="250">
+            <h1>Pet car Service</h1>
+            <p class = "slogan">Chăm sóc thú cưng tận tình</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <div class = "banner">Khuyến mãi hè 2025!</div>
+
+    <div class="container">
+        <article>
+            <h1>Giới thiệu về dịch vụ chăm sóc thú cưng</h1>
+
+            <h2>Tại sao lại chọn Pet care service</h2>
+            <p>là đơn vị tiên phong trong lĩnh vực chăm sóc thú cưng tại Việt Nam với hơn 10 năm kinh nghiệm. </p>
+
+            <h2>Các dịch vụ nổi bật</h2>
+            <p>Chung tôi cung cấp đa dạng các dịch vụ bao gồm:</p>
+            <ul>
+                <li><strong>Chăm sóc y tế</strong></li>
+                <li><strong>Chăm sóc sắc đẹp</strong></li>
+                <li><strong>Huấn luyện</strong></li>
+                <li><strong>Trông giữ</strong></li>
+            </ul>
+        </article>
+
+    </div>
+    <div class = "items" id="list"></div>
+
+    <div class = "form">
+        <form id="signup">
+            <h2>Đăng kí dịch vụ chăm sóc thú cưng</h2>
+            <input type="text" id="name" placeholder="Họ và Tên" required>
+            <input type="email" id="email" placeholder="Địa chỉ email" required>
+            <input type="tel" id="phone" placeholder="Số điện thoại" required>
+            <input type="text" id="pet" placeholder="Loại thú cưng" required>
+            <input type="text" id="desc" placeholder="Mô tả chi tiết nhu cầu" required>
+            <button type="submit">Gửi</button>
+    </form>
+    </div>
+
+    <footer>Nguyễn Đức Hoàng - 11222479 - CNTT64A </footer>
+
+    <script>
+        const services = [
+      {
+        name:"dịch vụ tắm rửa và cắt tỉa lông",
+        image:"",
+        description:"Dịch vụ tắm rửa, vệ sinh, cắt tỉa lông chuyên nghiệp giúp thú cưng luôn sạch sẽ và thơm tho.",
+        price:"20$/lượt",
+      },
+
+      {
+        name:"Khám sức khỏe định kỳ",
+        image:"",
+        description:"Kiểm tra tổng quát sức khỏe, phát hiện sớm các vấn đề bệnh lý và tư vấn chăm sóc phù hợp.",
+        price:"50$",
+      },
+
+      {
+        name:"Huấn luyện cơ bản",
+        image:"",
+        description:"Khóa học huấn luyện các lệnh cơ bản, giúp thú cưng ngoan ngoãn và nghe lời chủ nhân.",
+        price:"150$/10 buổi",
+      },
+
+      {
+        name:"Trông giữ thú cưng",
+        image:"",
+        description:"Dịch vụ trông giữ thú cưng khi bạn đi công tác hoặc du lịch, đảm bảo an toàn và thoải mái.",
+        price:"30$/ngày",
+      },
+    ];
+    let i=0;
+    const listDiv = document.getElementById("list")
+    while (i<services.length){
+      const s = services[i];
+      listDiv.innerHTML +=`
+        <div class="item" style="border: 1px solid #ccc; padding: 10px; margin: 10px;">
+            <img src = "${s.image}" alt = "${s.name}" width = "100" >
+            <h3>${s.name}</h3>
+            <p><strong>Mô tả:</strong>${s.description}</p>
+            <p><strong>Giá:</strong>${s.price}</p>
+        </div>
+        `;
+        i++;
+    }
+
+    document.getElementById("signup").addEventListener("submit", function (e) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            if ( !name || !email || !phone.match(/^\d{10,11}$/)){
+                alert("vui lòng điền đúng thông tin!");
+                e.preventDefault();
+            }else {
+                alert("Đã gửi thành công!")
+            }
+            }
+        );
+    </script>
+
+
+</body>
+</html>

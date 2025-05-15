@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dịch vụ chăm sóc thú cưng</title>
+
+</head>
+<body>
+  <h1>Các dịch vụ chăm sóc thú cưng</h1>
+  <div id="list"></div>
+  <script>
+    const services = [
+      {
+        name:"dịch vụ tắm rửa và cắt tỉa lông",
+        image:"",
+        description:"Dịch vụ tắm rửa, vệ sinh, cắt tỉa lông chuyên nghiệp giúp thú cưng luôn sạch sẽ và thơm tho.",
+        price:"20$/lượt",
+      },
+
+      {
+        name:"Khám sức khỏe định kỳ",
+        image:"",
+        description:"Kiểm tra tổng quát sức khỏe, phát hiện sớm các vấn đề bệnh lý và tư vấn chăm sóc phù hợp.",
+        price:"50$",
+      },
+
+      {
+        name:"Huấn luyện cơ bản",
+        image:"",
+        description:"Khóa học huấn luyện các lệnh cơ bản, giúp thú cưng ngoan ngoãn và nghe lời chủ nhân.",
+        price:"150$/10 buổi",
+      },
+
+      {
+        name:"Trông giữ thú cưng",
+        image:"",
+        description:"Dịch vụ trông giữ thú cưng khi bạn đi công tác hoặc du lịch, đảm bảo an toàn và thoải mái.",
+        price:"30$/ngày",
+      },
+    ];
+
+    let i=0;
+    const listDiv = document.getElementById("list")
+    while (i<services.length){
+      const s = services[i];
+      listDiv.innerHTML +=`
+        <div style="border: 1px solid #ccc; padding: 10px; margin: 10px;">
+            <img src = "${s.image}" alt = "${s.name}" width = "100" >
+            <h3>${s.name}</h3>
+            <p><strong>Mô tả:</strong>${s.description}</p>
+            <p><strong>Giá:</strong>${s.price}</p>
+        </div>
+        `;
+        i++;
+    }
+  </script>
+</body>
+</html>
